@@ -1,0 +1,33 @@
+.cart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftCol {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightCol {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cart {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftCol {
+    width: 100%;
+  }
+  .rightCol {
+    width: 100%;
+    margin: 0px;
+  }
+}/*# sourceMappingURL=Cart.module.css.map */
