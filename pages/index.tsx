@@ -7,11 +7,11 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import Navbar from "../components/Navbar";
 import ProductCard from "../components/ProductCard";
 import SimpleContainer from "../components/SimpleContainer";
-import { getProducts, productsActions } from "../store/store";
+import { getProducts, productsActions, store } from "../store/store";
 
 const Home = (props) => {
   const dispatch = useDispatch<any>();
-  const products = useSelector((state: any) => state.products.products);
+  const products = props.products;
   const loading = useSelector((state: any) => state.products.loading);
   useEffect(() => {
     dispatch(getProducts());
@@ -41,5 +41,16 @@ const Home = (props) => {
     </SimpleContainer>
   );
 };
+
+export async function getStaticProps() {
+  await store.dispatch(getProducts());
+
+  const products = store.getState().products.products;
+  return {
+    props: {
+      products,
+    },
+  };
+}
 
 export default Home;
