@@ -16,7 +16,6 @@ function CardItem(props: any) {
         width: "100%",
         display: "flex",
         justifyContent: "space-between",
-        margin: "20px",
       }}
     >
       <Box sx={{ display: "flex", flexDirection: "column" }}>
