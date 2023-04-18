@@ -8,7 +8,11 @@ const SimpleContainer = (props: any) => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container className={classes.container} maxWidth="lg">
+      <Container
+        className={classes.container}
+        maxWidth="lg"
+        sx={{ display: "flex" }}
+      >
         {props.children}
       </Container>
     </React.Fragment>
