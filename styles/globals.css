@@ -4,4 +4,6 @@
   margin: 0;
 }
 
-/*# sourceMappingURL=globals.css.map */
+.container {
+  display: flex;
+}/*# sourceMappingURL=globals.css.map */
