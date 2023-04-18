@@ -146,7 +146,7 @@ function Navbar() {
                   {page}
                 </Button>
                 {cart.length > 0 && (
-                  <div
+                  <p
                     style={{
                       backgroundColor: "red",
                       padding: "5px",
@@ -154,7 +154,7 @@ function Navbar() {
                     }}
                   >
                     {cart.length}
-                  </div>
+                  </p>
                 )}
               </div>
             ))}
